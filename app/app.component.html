@@ -1,0 +1,16 @@
+<ul>
+  <li
+    *ngFor="
+      let todo of todos;
+      let i = index;
+      let first = first;
+      let last = last;
+      trackBy: trackElement
+    "
+    [ngClass]="{ first: first, last: last, done: todo.done }"
+  >
+    <span [innerText]="i"></span> / <span [innerText]="todo.title"></span>
+    <button (click)="toggleTask(todo)">done</button>
+  </li>
+</ul>
+<div>Completed Tasks: {{ todos | countList: 'done' }}</div>

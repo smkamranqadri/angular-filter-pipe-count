@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+li.first {
+  color: blue;
+}
+li.last {
+  color: red;
+}
+li.done {
+  color: green;
+}
